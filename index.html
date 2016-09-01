@@ -5,7 +5,7 @@
     <title>Angular Responsive Tables by awerlang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
@@ -20,7 +20,7 @@
 
     <section class="main-content">
       <h1>
-<a id="angular-responsive-tables" class="anchor" href="#angular-responsive-tables" aria-hidden="true"><span class="octicon octicon-link"></span></a>angular-responsive-tables</h1>
+<a id="angular-responsive-tables" class="anchor" href="#angular-responsive-tables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>angular-responsive-tables</h1>
 
 <p>Make your HTML tables look great on every device. 
 Compatible with <strong>AngularJS 1.3.4+</strong>. </p>
@@ -28,7 +28,7 @@ Compatible with <strong>AngularJS 1.3.4+</strong>. </p>
 <p><a href="http://awerlang.github.io/angular-responsive-tables/examples/">Live Demo</a></p>
 
 <h2>
-<a id="why" class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h2>
+<a id="why" class="anchor" href="#why" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why?</h2>
 
 <p>Currently, browsers for mobile devices like smartphones doesn't do anything to have a proper presentation of tables,
  and then scrollbars will show up and ruin your design.</p>
@@ -51,19 +51,21 @@ Compatible with <strong>AngularJS 1.3.4+</strong>. </p>
 </ul>
 
 <h2>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
 
 <ul>
 <li>Angular native implementation compatible with 1.3.4+;</li>
 <li>Keep things DRY;</li>
 <li>Supports static and dynamic (ng-repeat) rows;</li>
+<li>Supports conditionally shown (ng-if) columns;</li>
+<li>Supports dynamic headers (ng-repeat);</li>
 <li>Easy to apply any style on top of it;</li>
 <li>Works with any base CSS framework; </li>
 <li>Should integrate seamlessly with any table component you might choose to use.</li>
 </ul>
 
 <h3>
-<a id="future-work" class="anchor" href="#future-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future Work</h3>
+<a id="future-work" class="anchor" href="#future-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Future Work</h3>
 
 <ul>
 <li>Choose what columns to show/hide according to a given screen resolution;</li>
@@ -73,7 +75,7 @@ Compatible with <strong>AngularJS 1.3.4+</strong>. </p>
 </ul>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <pre><code>&lt;table wt-responsive-table&gt;
     &lt;tr&gt;
@@ -104,10 +106,10 @@ Compatible with <strong>AngularJS 1.3.4+</strong>. </p>
 </code></pre>
 
 <h3>
-<a id="directives" class="anchor" href="#directives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Directives</h3>
+<a id="directives" class="anchor" href="#directives" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directives</h3>
 
 <h4>
-<a id="wt-responsive-table" class="anchor" href="#wt-responsive-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>wt-responsive-table</h4>
+<a id="wt-responsive-table" class="anchor" href="#wt-responsive-table" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>wt-responsive-table</h4>
 
 <ul>
 <li>table: wt-responsive-table
@@ -115,42 +117,93 @@ Compatible with <strong>AngularJS 1.3.4+</strong>. </p>
 <ul>
 <li>td: responsive-omit-title: title should be ommited</li>
 <li>td: responsive-omit-if-empty: no row for empty cells</li>
+<li>td: responsive-dynamic: add it when there's an <code>ng-if</code> directive applied to the element</li>
+<li>td: data-title: use to override the header for a given row/cell </li>
 </ul>
 </li>
 </ul>
 
 <h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
 
 <h3>
-<a id="bower" class="anchor" href="#bower" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bower</h3>
+<a id="bower" class="anchor" href="#bower" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bower</h3>
 
 <pre><code>bower install angular-responsive-tables --save
 </code></pre>
 
 <h3>
-<a id="application" class="anchor" href="#application" aria-hidden="true"><span class="octicon octicon-link"></span></a>Application</h3>
+<a id="application" class="anchor" href="#application" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Application</h3>
 
 <h4>
-<a id="html" class="anchor" href="#html" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML</h4>
+<a id="html" class="anchor" href="#html" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HTML</h4>
 
-<pre><code>&lt;link rel="stylesheet" href="release/angular-responsive-tables.min.css"&gt;&lt;/script&gt;
+<pre><code>&lt;link rel="stylesheet" href="release/angular-responsive-tables.min.css"&gt;
 &lt;script type="text/javascript" src="release/angular-responsive-tables.min.js"&gt;&lt;/script&gt;
 </code></pre>
 
 <h4>
-<a id="javascript" class="anchor" href="#javascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript</h4>
+<a id="javascript" class="anchor" href="#javascript" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JavaScript</h4>
 
 <pre><code>var app = angular.module('app', ['wt.responsive']);
 </code></pre>
 
 <h2>
-<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
+<a id="special-cases" class="anchor" href="#special-cases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Special cases</h2>
+
+<h3>
+<a id="header-doesnt-appear-for-a-row--need-to-override-header" class="anchor" href="#header-doesnt-appear-for-a-row--need-to-override-header" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Header doesn't appear for a row / need to override header</h3>
+
+<p>It's possible to override a header with a <code>data-title</code> attribute:</p>
+
+<pre><code>&lt;tr&gt;
+    &lt;td data-title="column 1"&gt;tom&lt;/td&gt;
+    &lt;td data-title="column 2"&gt;jerry&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+
+<h3>
+<a id="column-can-be-shownhidden-with-ng-if" class="anchor" href="#column-can-be-shownhidden-with-ng-if" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Column can be shown/hidden with ng-if</h3>
+
+<p>Also, more than one <code>td</code> exist for a single <code>th</code>...to deal with this add a <code>responsive-dynamic</code> attribute:</p>
+
+<pre><code>&lt;tr&gt;
+    &lt;td ng-if="condition" responsive-dynamic&gt;tom&lt;/td&gt;
+    &lt;td ng-if="!condition" responsive-dynamic&gt;jerry&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+
+<h3>
+<a id="changes-to-header-text-doesnt-reflect-in-responsive-mode" class="anchor" href="#changes-to-header-text-doesnt-reflect-in-responsive-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changes to header text doesn't reflect in responsive mode</h3>
+
+<p>This is by design. To avoid expensive digest cycles only the content from the first digest cycle is used. 
+There are no watches being setup.</p>
+
+<h3>
+<a id="ie9-responsive-hack" class="anchor" href="#ie9-responsive-hack" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>IE9 responsive hack</h3>
+
+<p>Because IE9 doesn't handle correctly a <code>display</code> CSS rule for <code>&lt;td&gt;</code>, if you need to support it, you can use the following style, only for IE9:</p>
+
+<div class="highlight highlight-source-css"><pre>&lt;!--[if IE 9]&gt;
+&lt;<span class="pl-ent">style</span>&gt;
+<span class="pl-c">/* rules for IE9 only */</span>
+<span class="pl-e">.responsive</span> {
+    <span class="pl-c1"><span class="pl-c1">overflow</span></span>: <span class="pl-c1">hidden</span>;
+}
+<span class="pl-e">.responsive</span> <span class="pl-ent">td</span><span class="pl-e">:nth-child</span>(<span class="pl-c1">odd</span>), <span class="pl-e">.responsive</span> <span class="pl-ent">td</span><span class="pl-e">:nth-child</span>(<span class="pl-c1">even</span>) {
+    <span class="pl-c1"><span class="pl-c1">float</span></span>: <span class="pl-c1">left</span>;
+    <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">100<span class="pl-k">%</span></span>;
+}
+&lt;/<span class="pl-ent">style</span>&gt;
+&lt;![endif]--&gt;</pre></div>
+
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Credits</h2>
 
 <p>CSS based on original work by Chris Coyier (<a href="http://css-tricks.com/responsive-data-tables/">http://css-tricks.com/responsive-data-tables/</a>). In this article, he covers approaches to responsive tables. I modified it to work around CSS specificity and to keep things DRY.</p>
 
 <h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>MIT</p>
 
@@ -175,4 +228,3 @@ Compatible with <strong>AngularJS 1.3.4+</strong>. </p>
 
   </body>
 </html>
-
